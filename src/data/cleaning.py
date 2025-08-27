@@ -8,7 +8,7 @@ def get_median(X: pd.DataFrame, columns: list[str]) -> list[float]:
     medians = [X[X[column] != 0][column].mean() for column in columns]
     return medians
 
-def replacing_zero_values_avg(X: pd.DataFrame, columns: list[str], median: list[float]) -> pd.DataFrame:
+def replacing_zero_values_median(X: pd.DataFrame, columns: list[str], median: list[float]) -> pd.DataFrame:
     '''
     В некоторых признаках имеются значения равные 0,
     хотя исходя из логики данных такого быть не может.
