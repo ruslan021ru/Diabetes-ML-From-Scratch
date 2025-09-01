@@ -29,8 +29,8 @@ def create_medical_features(X: pd.DataFrame) -> pd.DataFrame:
     
     return X
 
-def one_hot_encoding(X: pd.DataFrame, categorical_columns: list[str]) -> pd.DataFrame:
+def one_hot_encoding(X: pd.DataFrame) -> pd.DataFrame:
     '''
     one_hot_encoding
     '''
-    return pd.get_dummies(X, columns=categorical_columns)
+    return pd.get_dummies(X, columns=['Glucose_category', 'BMI_category', 'Blood_Pressure_category'])
