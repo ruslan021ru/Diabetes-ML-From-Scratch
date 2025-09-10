@@ -21,10 +21,6 @@ def create_medical_features(X: pd.DataFrame) -> pd.DataFrame:
                                bins=[0, 18.5, 24.9, 29.9, 100],
                                labels=['underweight', 'norm', 'overweight', 'obese'])
     
-    X['Blood_Pressure_category'] = pd.cut(X['BloodPressure'],
-                                          bins=[0, 79, 89, 140],
-                                          labels=['norm', 'prehypertension', 'hypertension'])
-    
     X.drop(['Glucose', 'BMI', 'BloodPressure'], axis=1, inplace=True)
     
     return X
@@ -33,4 +29,4 @@ def one_hot_encoding(X: pd.DataFrame) -> pd.DataFrame:
     '''
     one_hot_encoding
     '''
-    return pd.get_dummies(X, columns=['Glucose_category', 'BMI_category', 'Blood_Pressure_category'])
+    return pd.get_dummies(X, columns=['Glucose_category', 'BMI_category'])

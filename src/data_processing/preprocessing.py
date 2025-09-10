@@ -1,7 +1,3 @@
-import pandas as pd
-import numpy as np
-from typing import Tuple
-
 import sys
 import os
 
@@ -9,8 +5,12 @@ ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 sys.path.append(ROOT_DIR)
 
 from src.data.cleaning import get_median, replacing_zero_values_median, get_quantiles, capping_outliers
-from src.features.engineering import create_medical_features, one_hot_encoding
+from src.data.engineering import create_medical_features, one_hot_encoding
 from src.data.scaling import get_params_for_standardization, standardization
+
+import pandas as pd
+import numpy as np
+from typing import Tuple
 
 class DataPreprocessing:
     '''
