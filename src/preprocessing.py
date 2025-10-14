@@ -4,9 +4,9 @@ import os
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT_DIR)
 
-from src.data.cleaning import get_median, replacing_zero_values_median, get_quantiles, capping_outliers
-from src.data.engineering import create_medical_features, one_hot_encoding
-from src.data.scaling import get_params_for_standardization, standardization
+from src.data_processing.cleaning import get_median, replacing_zero_values_median, get_quantiles, capping_outliers
+from src.data_processing.engineering import create_medical_features, one_hot_encoding
+from src.data_processing.scaling import get_params_for_standardization, standardization
 
 import pandas as pd
 import numpy as np
