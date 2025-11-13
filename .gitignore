@@ -1,8 +1,11 @@
 /data
-*.pyc
 *.ipynb_checkpoints/
 */__pycache__
 */*/__pycache__
 */*/*/__pycache__
 */*/*/*/__pycache__
 */*/*/*/*/__pycache__
+notebooks/01_eda.ipynb
+notebooks/02_sgd_test.ipynb
+notebooks/03_sgd_test_2.ipynb
+notebooks/04_.ipynb
